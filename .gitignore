@@ -8,6 +8,8 @@
 /bin
 .DS_Store
 .project
+*.iml
+package-lock.json
 
 first-network/channel-artifacts/*.tx
 first-network/channel-artifacts/*.block
