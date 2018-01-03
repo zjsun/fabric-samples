@@ -39,7 +39,7 @@ function restartNetwork() {
 	#Cleanup the material
 	rm -rf /tmp/hfc-test-kvs_peerOrg* $HOME/.hfc-key-store/ /tmp/fabric-client-kvs_peerOrg*
 
-    read -p "Clenaup done. Any key to start the network..."
+    read -p "Clenaup done. Press enter to start the network..."
 
 	#Start the network
 	docker-compose up -d
