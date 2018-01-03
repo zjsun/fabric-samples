@@ -33,8 +33,8 @@ function restartNetwork() {
         #teardown the network and clean the containers and intermediate images
 	cd artifacts
 	docker-compose down
-	dkcl
-	dkrm
+	#dkcl
+	#dkrm
 
 	#Cleanup the material
 	rm -rf /tmp/hfc-test-kvs_peerOrg* $HOME/.hfc-key-store/ /tmp/fabric-client-kvs_peerOrg*
