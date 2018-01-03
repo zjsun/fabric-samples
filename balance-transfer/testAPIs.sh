@@ -24,6 +24,9 @@ ORG1_TOKEN=$(echo $ORG1_TOKEN | jq ".token" | sed "s/\"//g")
 echo
 echo "ORG1 token is $ORG1_TOKEN"
 echo
+
+read -p "Press enter to continue..."
+
 echo "POST request Enroll on Org2 ..."
 echo
 ORG2_TOKEN=$(curl -s -X POST \
@@ -35,6 +38,9 @@ ORG2_TOKEN=$(echo $ORG2_TOKEN | jq ".token" | sed "s/\"//g")
 echo
 echo "ORG2 token is $ORG2_TOKEN"
 echo
+
+read -p "Press enter to continue..."
+
 echo
 echo "POST request Create channel  ..."
 echo
@@ -48,7 +54,9 @@ curl -s -X POST \
 }'
 echo
 echo
-sleep 5
+
+read -p "Press enter to continue..."
+
 echo "POST request Join channel on Org1"
 echo
 curl -s -X POST \
@@ -61,6 +69,8 @@ curl -s -X POST \
 echo
 echo
 
+read -p "Press enter to continue..."
+
 echo "POST request Join channel on Org2"
 echo
 curl -s -X POST \
@@ -72,6 +82,8 @@ curl -s -X POST \
 }'
 echo
 echo
+
+read -p "Press enter to continue..."
 
 echo "POST Install chaincode on Org1"
 echo
@@ -88,6 +100,7 @@ curl -s -X POST \
 echo
 echo
 
+read -p "Press enter to continue..."
 
 echo "POST Install chaincode on Org2"
 echo
@@ -104,6 +117,8 @@ curl -s -X POST \
 echo
 echo
 
+read -p "Press enter to continue..."
+
 echo "POST instantiate chaincode on peer1 of Org1"
 echo
 curl -s -X POST \
@@ -117,6 +132,8 @@ curl -s -X POST \
 }'
 echo
 echo
+
+read -p "Press enter to continue..."
 
 echo "POST invoke chaincode on peers of Org1 and Org2"
 echo
@@ -132,6 +149,8 @@ echo "Transacton ID is $TRX_ID"
 echo
 echo
 
+read -p "Press enter to continue..."
+
 echo "GET query chaincode on peer1 of Org1"
 echo
 curl -s -X GET \
@@ -141,6 +160,8 @@ curl -s -X GET \
 echo
 echo
 
+read -p "Press enter to continue..."
+
 echo "GET query Block by blockNumber"
 echo
 curl -s -X GET \
@@ -149,6 +170,8 @@ curl -s -X GET \
   -H "content-type: application/json"
 echo
 echo
+
+read -p "Press enter to continue..."
 
 echo "GET query Transaction by TransactionID"
 echo
@@ -173,6 +196,8 @@ echo
 #echo
 #echo
 
+read -p "Press enter to continue..."
+
 echo "GET query ChainInfo"
 echo
 curl -s -X GET \
@@ -181,6 +206,8 @@ curl -s -X GET \
   -H "content-type: application/json"
 echo
 echo
+
+read -p "Press enter to continue..."
 
 echo "GET query Installed chaincodes"
 echo
@@ -191,6 +218,8 @@ curl -s -X GET \
 echo
 echo
 
+read -p "Press enter to continue..."
+
 echo "GET query Instantiated chaincodes"
 echo
 curl -s -X GET \
@@ -200,6 +229,8 @@ curl -s -X GET \
 echo
 echo
 
+read -p "Press enter to continue..."
+
 echo "GET query Channels"
 echo
 curl -s -X GET \
@@ -208,6 +239,5 @@ curl -s -X GET \
   -H "content-type: application/json"
 echo
 echo
-
 
 echo "Total execution time : $(($(date +%s)-starttime)) secs ..."
