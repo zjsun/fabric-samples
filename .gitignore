@@ -11,6 +11,9 @@
 *.iml
 package-lock.json
 docker-compose-e2e.yaml
+node_modules
+
+fabcar/hfc-key-store
 
 first-network/channel-artifacts/*.tx
 first-network/channel-artifacts/*.block
